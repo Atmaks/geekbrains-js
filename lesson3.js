@@ -49,3 +49,15 @@ function countBasketPrice(basket) {
 console.log("Корзина:");
 console.log(presetBasket);
 console.log("Стоимость корзины: " + countBasketPrice(presetBasket));
+
+console.log("Задача 4 - цикл без тела");
+
+for (i = 1; i <= 9; console.log(i++)) {}
+
+console.log("Задача 5 - пирамида");
+
+var outputString = "X";
+for (i = 1; i < 20; i++) {
+  console.log(outputString);
+  outputString += "X";
+}
