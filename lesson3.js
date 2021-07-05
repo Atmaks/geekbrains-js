@@ -21,3 +21,31 @@ while (i <= 100) {
 
   i++;
 }
+
+console.log("Задача 2-3 - корзина");
+
+var presetBasket = [
+  {
+    name: "Кепка белая Nike",
+    price: 450,
+    count: 1,
+  },
+  {
+    name: "Кроссовки непромокаемые спортивные белые Adidas",
+    price: 5000,
+    count: 1,
+  },
+];
+
+function countBasketPrice(basket) {
+  let sum = 0;
+  for (let i = 0; i < basket.length; i++) {
+    sum += basket[i].count * basket[i].price;
+  }
+
+  return sum;
+}
+
+console.log("Корзина:");
+console.log(presetBasket);
+console.log("Стоимость корзины: " + countBasketPrice(presetBasket));
