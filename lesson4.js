@@ -1,6 +1,6 @@
 "use strict";
 
-console.log("Задача 1 - простые числа от 1 до 100");
+console.log("Задача 1 - число в объект");
 
 function isValidNumber(number) {
   return;
@@ -31,30 +31,44 @@ testFunc(34);
 testFunc(999);
 testFunc(1000);
 
-// console.log("Задача 2-3 - корзина");
+console.log("Задача 2 - корзина с объектами");
 
-// var presetBasket = [
-//   {
-//     name: "Кепка белая Nike",
-//     price: 450,
-//     count: 1,
-//   },
-//   {
-//     name: "Кроссовки непромокаемые спортивные белые Adidas",
-//     price: 5000,
-//     count: 1,
-//   },
-// ];
+var products = [
+  {
+    name: "Кепка белая Nike",
+    price: 450,
+  },
+  {
+    name: "Кроссовки непромокаемые спортивные белые Adidas",
+    price: 5000,
+  },
+];
 
-// function countBasketPrice(basket) {
-//   let sum = 0;
-//   for (let i = 0; i < basket.length; i++) {
-//     sum += basket[i].count * basket[i].price;
-//   }
+var orders = [
+  {
+    product: products[0],
+    count: 1,
+  },
+  {
+    product: products[1],
+    count: 2,
+  },
+];
 
-//   return sum;
-// }
+var basket = {
+  user: "Aerith",
+  orders: orders,
+};
 
-// console.log("Корзина:");
-// console.log(presetBasket);
-// console.log("Стоимость корзины: " + countBasketPrice(presetBasket));
+function countBasketPrice(basket) {
+  let sum = 0;
+  for (let i = 0; i < basket.orders.length; i++) {
+    sum += basket.orders[i].count * basket.orders[i].product.price;
+  }
+
+  return sum;
+}
+
+console.log("Корзина:");
+console.log(basket);
+console.log("Стоимость корзины: " + countBasketPrice(basket));
